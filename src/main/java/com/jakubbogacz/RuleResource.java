@@ -19,5 +19,4 @@ public class RuleResource {
     public ResponseEntity<List<Rule>> rules() {
         return new ResponseEntity<>(RuleListContext.RULE_LIST, HttpStatus.OK);
     }
-
 }
