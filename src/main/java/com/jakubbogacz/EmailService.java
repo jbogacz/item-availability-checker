@@ -25,7 +25,7 @@ public class EmailService {
         MimeMessage mail = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mail, true);
         helper.setFrom("item.availability.checker@gmail.com");
-        helper.setTo(recipients);
+        helper.setTo(recipients.split(","));
         helper.setSubject(subject);
         helper.setText(text, true);
         javaMailSender.send(mail);
