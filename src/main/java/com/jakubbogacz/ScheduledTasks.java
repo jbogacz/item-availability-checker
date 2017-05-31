@@ -57,7 +57,7 @@ public class ScheduledTasks {
 
     @Scheduled(fixedRate = 300000)
     public void awakeHerokuItSelf() throws IOException {
-        LOGGER.info("Awakening it self");
+        LOGGER.info("Awakening itself");
         HttpURLConnection connection =
                 (HttpURLConnection) new URL("https://infinite-reef-78093.herokuapp.com/rules").openConnection();
         InputStream response = connection.getInputStream();
