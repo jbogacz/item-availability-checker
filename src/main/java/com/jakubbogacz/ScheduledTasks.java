@@ -50,4 +50,10 @@ public class ScheduledTasks {
             }
         }
     }
+
+    @Scheduled(fixedRate = 300000)
+    public void awakeHerokuItSelf() throws IOException {
+        LOGGER.info("Hello dude!");
+        Jsoup.connect("https://infinite-reef-78093.herokuapp.com/rules").get();
+    }
 }
